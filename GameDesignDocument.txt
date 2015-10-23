@@ -1,0 +1,27 @@
+Gameplay Dynamics
+=========================
+Ship movement
+ship firing
+Death 
+
+Enemy types
+Enemy firing
+
+Environments
+Scoring
+Power ups
+
+level generator
+non-linear playthroughs
+
+Possible classic/retro mode
+story-mode
+
+customize ship
+
+buy upgrades for ship
+	- weapons
+	- engines
+	- decorative
+	- colors
+
