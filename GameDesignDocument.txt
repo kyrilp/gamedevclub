@@ -11,6 +11,12 @@ Environments
 Scoring
 Power ups
 
+
+Other features
+=========================
+on the ground segments, sidescrolling shoot em up
+
+
 level generator
 non-linear playthroughs
 
@@ -18,6 +24,8 @@ Possible classic/retro mode
 story-mode
 
 customize ship
+	parts fall from specific ships
+	replay level to craft weapons
 
 buy upgrades for ship
 	- weapons
