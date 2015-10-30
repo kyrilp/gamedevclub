@@ -1,0 +1,35 @@
+using UnityEngine;
+using System.Collections;
+
+public class PlayerControls : MonoBehaviour {
+	
+	private Rigidbody2D myRigidBody;
+	public float FlySpeed;
+	// Use this for initialization
+	void Start () {
+		myRigidBody = GetComponent<Rigidbody2D>();
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		if (Input.GetKey(KeyCode.RightArrow)){
+			myRigidBody.velocity = new Vector2(FlySpeed, myRigidBody.velocity.y);
+		}
+		else if (Input.GetKey(KeyCode.LeftArrow)){
+			myRigidBody.velocity = new Vector2(-FlySpeed, myRigidBody.velocity.y);
+		}
+		else{
+			myRigidBody.velocity = new Vector2(0, myRigidBody.velocity.y);
+		}
+		if (Input.GetKey(KeyCode.UpArrow)){
+			myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, FlySpeed);
+		}
+		else if (Input.GetKey(KeyCode.DownArrow)){
+			myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, -FlySpeed);
+		}
+		else{
+			myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, 0);
+		}
+		
+	}
+}
