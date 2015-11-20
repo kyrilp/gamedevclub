@@ -5,9 +5,12 @@ public class PlayerControls : MonoBehaviour {
 	
 	private Rigidbody2D myRigidBody;
 	public float FlySpeed;
+	public GameObject laserBeam;
+
 	// Use this for initialization
 	void Start () {
 		myRigidBody = GetComponent<Rigidbody2D>();
+		InvokeRepeating("Shoot", 1,1);
 	}
 	
 	// Update is called once per frame
@@ -31,5 +34,10 @@ public class PlayerControls : MonoBehaviour {
 			myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, 0);
 		}
 		
+	}
+
+	void Shoot() {
+		GameObject laser = Instantiate (laserBeam, transform.position, Quaternion.identity) as GameObject;
+		laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0,8);
 	}
 }
